@@ -11092,6 +11092,21 @@ body {
   padding: 0 0 1rem;
 }
 
+.background-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+
+.borderInicioSesion {
+  border: red 5px solid;
+}
+
+div{
+  opacity: 0.97;
+}
+
 .datatable-bottom {
   padding: 0;
 }
