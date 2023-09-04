@@ -1,21 +1,13 @@
 @extends('layouts.auth')
 
 @section('main-content')
-<section class="background-section" style="background-image: url('{{ asset('img/fondo-registro.jpg') }}');";>
+<section class="background-section" style="background-image: url('{{ asset('img/Cafe-bar.png') }}');"; >
     <form action="{{ route('register.store') }}" method="post">
         @csrf
-        <div>
-            <nav class="navbar navbar-light bg-light">
-                <span class="navbar-brand">
-                    <img src="{{ asset('img/icono.png') }}" width="32" height="32" class="d-inline-block align-top" alt="icono">
-                        Coffe Time
-                </span>
-            </nav>
-        </div>
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-5">
-                    <div class="card rounded-lg mt-5 borderInicioSesion">
+                    <div class="card border-0 rounded-lg mt-5">
                         <div class="card-header bg-light">
                             <h3 class="text-center font-weight-light my-4 text-uppercase">Crear una cuenta</h3>
                         </div>
@@ -73,10 +65,8 @@
 @endsection
 
 <style>
-    section{
-        background-color: #CD9200;
-        height: 100%;
-    }
 
-
+section{
+    height: 100%;
+}
 </style>

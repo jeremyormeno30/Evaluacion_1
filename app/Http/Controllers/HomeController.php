@@ -15,4 +15,13 @@ class HomeController extends Controller
         // que estará disponible en la plantilla.
         return View('admin.home')->with(['user' => $authenticated_user]);
     }
+
+    public function showConocenos(){
+        // Obtiene al usuario autenticado
+
+        // Retorna la vista ubicada en admin.home y con with le pasamos
+        // la variable a la plantilla, la clave es el nombre de la variable
+        // que estará disponible en la plantilla.
+        return View('admin.conocenos');
+    }
 }

@@ -35,3 +35,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware(
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/conocenos', [HomeController::class, 'showConocenos'])->name('conocenos');

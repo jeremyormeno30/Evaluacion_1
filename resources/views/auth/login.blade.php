@@ -1,25 +1,21 @@
 @extends('layouts.auth')
 
 @section('main-content')
-<section class="background-section" style="background-image: url('{{ asset('img/Cafe-bar.png') }}');"; >
+
+<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+
+<section class="background-section" style="background-image: url('{{ asset('img/cafe-bar.png') }}');"; >
     <form action="{{ route('login.attempt') }}" method="POST">
         @csrf
-        <div>
-            <nav class="navbar navbar-light bg-light">
-                <span class="navbar-brand">
-                    <img src="{{ asset('img/icono.png') }}" width="32" height="32" class="d-inline-block align-top" alt="icono">
-                        Coffe Time
-                </span>
-            </nav>
-        </div>
-        
         <div class="container">
+
             <div class="row justify-content-letf">
                 <div class="col-lg-5">
-                <h3 class="text-center font-weight-light my-4 text-uppercase row justify-content-center"><strong>Prueba nuestra nueva cadena<br>
+                <h1 class="text-center font-weight-light my-4 text-uppercase row justify-content-center">Coffe Time</h1>
+                <h3 class="text-center font-weight-light my-4 text-uppercase row justify-content-center">Prueba nuestra nueva cadena<br>
                                                                                                          100% artesanal<br>100% Chilena<br>
-                                                                                                         100% olor a cafe <strong></h3>
-                    <div class="card  rounded-lg mt-5 borderInicioSesion" >
+                                                                                                         100% olor a cafe </h3>
+                    <div class="card border-0 rounded-lg mt-5">
                         <div class="card-header bg-light">
                             <h3 class="text-center font-weight-light my-4 text-uppercase">Iniciar sesión</h3>
                         </div>
@@ -65,6 +61,16 @@
     </section>
 @endsection
 
+<style>
 
 
+h1{
+    color: deepskyblue;
+}
+h3{
+    color: deepskyblue;
+}
+
+
+</style>
 
