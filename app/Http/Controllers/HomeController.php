@@ -4,24 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Product;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
-    public function index(){
-        // Obtiene al usuario autenticado
+    public function index()
+    {
         $authenticated_user = Auth::user();
-        // Retorna la vista ubicada en admin.home y con with le pasamos
-        // la variable a la plantilla, la clave es el nombre de la variable
-        // que estará disponible en la plantilla.
         return View('admin.home')->with(['user' => $authenticated_user]);
     }
 
-    public function showConocenos(){
-        // Obtiene al usuario autenticado
-
-        // Retorna la vista ubicada en admin.home y con with le pasamos
-        // la variable a la plantilla, la clave es el nombre de la variable
-        // que estará disponible en la plantilla.
+    public function showConocenos()
+    {
         return View('admin.conocenos');
+    }
+
+    public function mostrarDatos()
+    {
+        $cafes = DB::table('products')->where('category', 'Cafe')->get();
+        $pasteleria = DB::table('products')->where('category', 'pasteleria')->get();
+        $sandwich = DB::table('products')->where('category', 'sandwich')->get();
+        return view('admin.home', compact('cafes', 'pasteleria', 'sandwich'));
     }
 }

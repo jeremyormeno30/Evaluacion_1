@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AuthController extends Controller
 {
@@ -44,7 +45,7 @@ class AuthController extends Controller
             'password' => bcrypt($request->password)
         ]);
         Auth::login($user);
-        return redirect()->route('home');
+        return redirect()->route('login');
     }
 
     public function logout(){
@@ -52,3 +53,4 @@ class AuthController extends Controller
         return redirect()->route('login');
     }
 }
+

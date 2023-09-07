@@ -16,14 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => '/login'], function(){
+Route::group(['prefix' => '/login'], function () {
     Route::get('/', [AuthController::class, 'showLogin'])->name('login');
     Route::post('/', [AuthController::class, 'attemptLogin'])->name('login.attempt');
 });
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
-Route::group(['prefix' => '/register'], function(){
+Route::group(['prefix' => '/register'], function () {
     Route::get('/', [AuthController::class, 'showRegister'])->name('register');
     Route::post('/', [AuthController::class, 'storeAccount'])->name('register.store');
 });
@@ -38,3 +38,6 @@ Route::get('/', function () {
 
 
 Route::get('/conocenos', [HomeController::class, 'showConocenos'])->name('conocenos');
+
+Route::get('/home', [HomeController::class, 'mostrarDatos'])->name('home')->middleware('auth');
+;

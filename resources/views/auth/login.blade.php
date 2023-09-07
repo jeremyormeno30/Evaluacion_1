@@ -1,9 +1,6 @@
 @extends('layouts.auth')
 
 @section('main-content')
-
-<link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
-
 <section class="background-section" style="background-image: url('{{ asset('img/cafe-bar.png') }}');"; >
     <form action="{{ route('login.attempt') }}" method="POST">
         @csrf

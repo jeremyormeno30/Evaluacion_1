@@ -12290,6 +12290,10 @@ footer span a:hover{
         line-height: 38px;
     }
 }
+.text-justify {
+  text-align: justify;
+}
+
 
 span{
     color: #0ef;
