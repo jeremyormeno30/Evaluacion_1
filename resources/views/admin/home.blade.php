@@ -151,7 +151,7 @@
     <section class="cafe" id="sandwish" style="background-image: url('{{ asset('img/home.jpg')}}'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
 
     <div class="max-width">
-            <h2 class="title">Pasteleria</h2>
+            <h2 class="title">Sándwich</h2>
 
             <div class="carousel owl-carousel">
             @foreach($sandwich as $dato)
